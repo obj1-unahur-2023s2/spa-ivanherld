@@ -1,0 +1,29 @@
+import personas.*
+
+test "assert esta Ok si assert.that(true)" {
+	assert.that(true)
+}
+
+test "assert esta Ok si assert.notTthat(false)" {
+	assert.notThat(false)
+}
+
+test "assert con equals" {
+	assert.equals(5, 2+3)
+}
+
+
+test "Olivia nace con concentración = 6" {
+
+	assert.equals(6, olivia.gradoDeConcentracion())
+
+}
+
+test "Bruno nace sin sed"{
+	assert.notThat(bruno.tieneSed())
+}
+
+test " Bruno queda con 54500 de peso y tiene sed despues de baño vapor" {
+	bruno.darseBanioDeVapor()
+	assert.equals(54500,bruno.peso())
+	assert.that(bruno.tieneSed())}
